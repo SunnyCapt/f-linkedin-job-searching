@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="table-data">
+  <p-table #table [columns]="columns" [value]="flnTypesData"
+           [scrollable]="true"
+           scrollHeight="100vh"
+           [virtualScroll]="true"
+           [virtualScrollItemSize]="46"
+           [globalFilterFields]="['name']">
+    <ng-template pTemplate="caption">
+      <div class="flex">
+        <span class="p-input-icon-left ml-auto">
+                    <i class="pi pi-search"></i>
+                    <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')" placeholder="Search keyword" />
+        </span>
+        <div>
+          <span class="p-input-icon-right ml-auto large-width">
+                    <i class="pi pi-copy pointer" (click)="copyToBuffer()"></i>
+                    <input class="full-input" pInputText type="text" [ngModel]="inputUrl"/>
+          </span>
+          <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clearFilter()"></button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns" style="width: 20%;">
+          {{col.header}}
+        </th>
+        <th>
+          Кнопошка
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-rowIndex="rowIndex" let-columns="columns">
+      <tr style="height:46px">
+        <td *ngFor="let col of columns">
+          {{rowData[col.field]}}
+        </td>
+        <td style="width: 10%">
+          <button (click)="addURNValue(rowData['URN'])" pButton [label]="'UseMePlease'" class="p-button-outlined"></button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  </div>
+</div>
