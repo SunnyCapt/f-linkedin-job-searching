@@ -1,6 +1,6 @@
 .idea
 .trash
-titles*.json
-/frontPart/.vscode
-/frontPart/node_modules
-/frontPart/.angular
+front/src/assets/titles*.json
+/front/.vscode
+/front/node_modules
+/front/.angular

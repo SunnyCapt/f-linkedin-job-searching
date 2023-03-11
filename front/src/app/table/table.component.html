@@ -12,6 +12,9 @@
                     <i class="pi pi-search"></i>
                     <input pInputText type="text" (input)="applyFilterGlobal($event, 'contains')" placeholder="Search keyword" />
         </span>
+	<a href="https://github.com/SunnyCapt/f-linkedin-job-searching" target="_blank">
+		<button pButton label="GITHUB" class="p-button-outlined"></button>
+	</a>
         <div>
           <span class="p-input-icon-right ml-auto large-width">
                     <i class="pi pi-copy pointer" (click)="copyToBuffer()"></i>
@@ -27,7 +30,7 @@
           {{col.header}}
         </th>
         <th>
-          Кнопошка
+          
         </th>
       </tr>
     </ng-template>
@@ -37,7 +40,7 @@
           {{rowData[col.field]}}
         </td>
         <td style="width: 10%">
-          <button (click)="addURNValue(rowData['URN'])" pButton [label]="'UseMePlease'" class="p-button-outlined"></button>
+          <button (click)="addURNValue(rowData['URN'])" pButton [label]="'add me'" class="p-button-outlined"></button>
         </td>
       </tr>
     </ng-template>
