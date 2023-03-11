@@ -1,0 +1,30 @@
+.fake-link{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0109fe;
+  text-decoration-color: #0109fe;;
+}
+.flex{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.table-data{
+  width: 50%;
+  border: 1px solid #dee2e6;
+  border-top: 0;
+}
+.pointer{
+  cursor: pointer;
+}
+.card{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.full-input{
+  width: 100%;
+}
+.large-width{
+  width: 600px;
+}
